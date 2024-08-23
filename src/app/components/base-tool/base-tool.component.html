@@ -1,0 +1,34 @@
+<div style="display: flex">
+
+  <canvas #canvas
+          style="border: 1px solid black"
+          width="1200"
+          height="800"
+          (mousemove)="mousemove($event)"
+          (mousedown)="mousedown($event)"
+          (mouseup)="mouseup($event)"
+          (mouseleave)="mouseleave($event)"
+  >
+  </canvas>
+
+</div>
+<div style="display:flex;">
+  <button (click)="addShape()">Add tool</button>
+  <div style="width: 6px"></div>
+  <button (click)="removeShape()">Remove tool</button>
+  <button (click)="copyShape()">Remove tool</button>
+</div>
+
+<div *ngIf="!!Object.keys(shapes).length" style="display: flex; flex-direction: column">
+  @for (id of Object.keys(shapes); track id) {
+    <div style="margin-top: 20px">
+      <button (click)="setSelectedShapeId(id)"> {{ id }}</button>
+    </div>
+  }
+</div>
+
+<div style="display: flex; flex-direction: column">
+  <span>Selected Shape: {{ getSelectedShapeId() }}</span>
+  <span>Hovered Shape: {{ getHeveredShapeId() }}</span>
+  <span>Vertice: {{ getHoveredVertice() }}</span>
+</div>

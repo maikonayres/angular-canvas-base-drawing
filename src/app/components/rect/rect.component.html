@@ -1,0 +1,27 @@
+<div style="display: flex">
+
+  <canvas #canvas
+          style="border: 1px solid black"
+          width="1200"
+          height="800"
+          (mousemove)="mousemove($event)"
+          (mousedown)="mousedown($event)"
+          (mouseup)="mouseup($event)"
+          (mouseleave)="mouseleave($event)"
+  >
+  </canvas>
+
+</div>
+<div style="display:flex;">
+  <button (click)="addTool()">Add tool</button>
+  <div style="width: 6px"></div>
+  <button (click)="removeTool()">Remove tool</button>
+</div>
+
+<div *ngIf="!!Object.keys(drawState).length" style="display: flex; flex-direction: column">
+  @for (item of Object.keys(drawState); track item) {
+    <div style="margin-top: 20px">
+      <button (click)="selectShape(item)"> {{ item }}</button>
+    </div>
+  }
+</div>

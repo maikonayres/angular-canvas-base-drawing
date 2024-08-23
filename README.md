@@ -1,6 +1,8 @@
-# CanvasTest
+# Angular Canvas Base Drawing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+
+This project aims to develop a graphics engine to draw geometric shapes using the mouse in a web environment and using Angular
 
 ## Development server
 

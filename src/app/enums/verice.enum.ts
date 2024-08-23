@@ -1,0 +1,8 @@
+export enum VericeEnum {
+  VERTICE_A = 'VERTICE_A',
+  VERTICE_B = 'VERTICE_B',
+  VERTICE_C = 'VERTICE_C',
+  VERTICE_D = 'VERTICE_D',
+  VERTICE_E = 'VERTICE_E',
+  VERTICE_F = 'VERTICE_F',
+}
